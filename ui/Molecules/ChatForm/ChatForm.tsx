@@ -1,11 +1,11 @@
 import { Button } from "@/ui/Atoms/Button";
 import { Input } from "@/ui/Atoms/Input";
-import React, { ChangeEventHandler } from "react";
+import React, { ChangeEventHandler, FormEventHandler } from "react";
 
 interface Props {
   inputValue: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  onSubmit: () => void;
+  onSubmit: FormEventHandler<HTMLFormElement>;
   content: {
     inputPlaceholderText: string;
     buttonText: string;
@@ -25,7 +25,7 @@ export const ChatForm: React.FC<Props> = (props) => {
         placeholder={props.content.inputPlaceholderText}
         value={props.inputValue}
       />
-      <Button onSubmit={props.onSubmit}>{props.content.buttonText}</Button>
+      <Button type="submit">{props.content.buttonText}</Button>
     </form>
   );
 };

@@ -4,7 +4,7 @@ type DefaultProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 interface Props {
   children: React.ReactNode;
-  onSubmit: () => void;
+  onSubmit?: () => void;
   disabled?: boolean;
   className?: string;
   type?: DefaultProps["type"];
