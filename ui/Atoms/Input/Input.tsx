@@ -8,6 +8,7 @@ interface Props {
   value: string;
   onChange: DefaultProps["onChange"];
   placeholder?: string;
+  disabled?: boolean;
 }
 
 const defaultProps = {
@@ -22,6 +23,7 @@ export const Input: React.FC<Props> = (props = defaultProps as any) => {
       value={props.value}
       onChange={props.onChange}
       placeholder={props.placeholder}
+      disabled={props.disabled}
       className={`w-full mx-auto py-2 px-4
         border rounded 
       disabled:bg-slate-50 disabled:border-slate-200 disabled:shadow-none 

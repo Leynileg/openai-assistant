@@ -5,6 +5,7 @@ import { Input } from "@/ui/Atoms/Input";
 
 interface Props {
   inputValue: string;
+  isSubmitting: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
   onSubmit: FormEventHandler<HTMLFormElement>;
   content: {
@@ -25,8 +26,11 @@ export const ChatForm: React.FC<Props> = (props) => {
         onChange={props.onChange}
         placeholder={props.content.inputPlaceholderText}
         value={props.inputValue}
+        disabled={props.isSubmitting}
       />
-      <Button type="submit">{props.content.buttonText}</Button>
+      <Button disabled={props.isSubmitting || !props.inputValue} type="submit">
+        {props.content.buttonText}
+      </Button>
     </form>
   );
 };
