@@ -34,7 +34,7 @@ export const Message: React.FC<Props> = (props) => {
     >
       <div
         className={`flex flex-col py-2 px-4 rounded 
-        font-light text-sm max-w[14rem] whitespace-pre-line 
+        font-light text-sm max-w-[16rem] whitespace-pre-line 
         ${getVariantStyles(props.variant)}
       `}
       >

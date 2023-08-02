@@ -1,6 +1,7 @@
+import React, { ChangeEventHandler, FormEventHandler } from "react";
+
 import { Button } from "@/ui/Atoms/Button";
 import { Input } from "@/ui/Atoms/Input";
-import React, { ChangeEventHandler, FormEventHandler } from "react";
 
 interface Props {
   inputValue: string;

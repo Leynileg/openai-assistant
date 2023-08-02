@@ -2,9 +2,10 @@
 import React from "react";
 
 import { Message } from "@/ui/Atoms/Message";
-import { ChatForm } from "@/ui/Molecules/ChatForm/ChatForm";
+import { ChatForm } from "@/ui/Molecules/ChatForm";
 
 import { useChatContainer } from "./ChatContainer.hooks";
+import { fetchFacade } from "@/services/fetchFacade";
 
 export const ChatContainer = () => {
   const {

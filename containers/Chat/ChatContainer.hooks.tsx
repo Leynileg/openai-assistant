@@ -35,6 +35,7 @@ export const useChatContainer = () => {
         content: userMessage,
       },
     ]);
+    setUserMessage("");
 
     await new Promise((resolve) => {
       setTimeout(() => {
@@ -47,12 +48,6 @@ export const useChatContainer = () => {
       ...messages,
       { content: userMessage, role: "user" },
     ]);
-
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(true);
-      }, 4000);
-    });
 
     setIsSubmitting(false);
     setMessages((prev) => [

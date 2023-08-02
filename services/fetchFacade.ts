@@ -10,8 +10,10 @@ export const fetchFacade = (url: string, options: any = { headers: {} }) => {
         ...headers,
       },
     })
-      .then((resp) => resp.json())
+      .then((resp) => {
+        return resp.json();
+      })
       .then(resolve)
-      .catch(() => reject(new Error("Something went wrong :(")));
+      .catch(reject);
   });
 };
