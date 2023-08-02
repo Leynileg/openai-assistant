@@ -1,3 +1,7 @@
+## Demo video
+
+https://github.com/Leynileg/openai-assistant/assets/29556343/6589a5ad-4c77-4647-8da7-0b6c5f754146
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
